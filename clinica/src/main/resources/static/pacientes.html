@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Pacientes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/paciente/get_paciente.js"></script>
+    <script type="text/javascript" src="js/paciente/put_paciente.js"></script>
+    <script type="text/javascript" src="js/paciente/delete_paciente.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pacienteAlta.html">Agregar nuevo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pacientes.html">Todos</a>
+        </li>
+    </ul>
+
+    <div id="div_student_table">
+        <h1 class="text-center">Pacientes</h1>
+        <div class="row col-md-9 mx-auto table-responsive">
+            <table id="pacienteTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>DNI</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Calle</th>
+                    <th>Numero</th>
+                    <th>Localidad</th>
+                    <th>Provincia</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="display: none;
+											background-color:#e6fffa; padding:10px; border-radius:3px"
+             id="div_paciente_updating">
+            <form id="update_paciente_form">
+                <div class="form-group">
+                    <label >id:</label>
+                    <input type="text" class="form-control" id="paciente_id" readonly>
+                </div>
+                <div class="form-group">
+                    <label >nombre:</label>
+                    <input type="text" class="form-control" placeholder="nombre" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label >apellido:</label>
+                    <input type="text" class="form-control" placeholder="apellido" id="apellido">
+                </div>
+                <div class="form-group">
+                    <label >email:</label>
+                    <input type="text" class="form-control" placeholder="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label >dni:</label>
+                    <input type="text" class="form-control" placeholder="dni" id="dni">
+                </div>
+                <div class="form-group">
+                    <label >fecha de ingreso</label>
+                    <input type="text" class="form-control" placeholder="fechaingreso" id="fechaingreso">
+                </div>
+                <div class="form-group">
+                    <label >Calle</label>
+                    <input type="text" class="form-control" placeholder="calle" id="calle">
+                </div>
+                <div class="form-group">
+                    <label >Numero</label>
+                    <input type="text" class="form-control" placeholder="numero" id="numero">
+                </div>
+                <div class="form-group">
+                    <label >localidad</label>
+                    <input type="text" class="form-control" placeholder="localidad" id="localidad">
+                </div>
+                <div class="form-group">
+                    <label >provincia</label>
+                    <input type="text" class="form-control" placeholder="provincia" id="provincia">
+                </div>
+                <button type="submit" class="btn btn-primary">modificar</button>
+            </form>
+            <div id="response" style="display:none; margin:10px">
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+</body>
+</html>
